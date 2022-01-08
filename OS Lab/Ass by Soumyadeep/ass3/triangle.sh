@@ -1,4 +1,3 @@
-tput clear
 cols=`tput cols`
 start=$((cols/2))
 echo "How many rows do you want"
@@ -7,13 +6,14 @@ echo "What character do you want to use"
 read char
 
 tput clear
-for((i=;i<rows;i++))
+for((i=0;i<rows;i++))
 do 
 cols=$((start-i))
 tput cup $i $cols
 
 for((j=0;j<=i;j++))
 do
+
 if [ $i -eq $((rows-1)) ]
 then
 printf "$char "
@@ -29,6 +29,7 @@ else
 	else
 	printf "  "
 	fi 
+
 fi
 
 done
