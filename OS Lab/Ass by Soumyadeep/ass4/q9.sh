@@ -1,3 +1,5 @@
+echo -n "Enter date in 2-digit - "
+read dd
 echo -n "Enter month in 2-digit - "
 read mm
 echo -n "Enter year in 4-digit - "
