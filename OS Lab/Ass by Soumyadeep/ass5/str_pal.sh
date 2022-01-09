@@ -1,39 +1,39 @@
-#Read a text file as an input and select the palindrome words from the text and store the palindrome words into another file (omit ‘.’ Or ‘;’ after the word).
-palindrome()
-{
-	str=$1
-	flg=0
-	len=`echo $str|wc -c`
-	len=`expr $len - 1`
-	l=$len
-	for((i=1;i<=len/2;i++))
-        do
-                a=`echo $str|cut -c $i`
-                b=`echo $str|cut -c $l`
-                if [ $a != $b ]
-                then            
-                    flg=1
-                    break
-                fi
-                l=`expr $l - 1`
-	  done
-				if [ $flg -ne 1 ]
-     		 	then
-               	 echo $str>>palin.txt 
-				fi
-        
+ispalin(){
+  word=$1
+  flag=0
+  len=`echo $word|wc -c`
+  len=`expr $len - 1`
+  l=$len
+  for((i=1;i<=len/2;i++)); do
+    beg=`echo $word|cut -c $i`
+    end=`echo $word|cut -c $l`
+    if [ $beg != $end ]; then
+      flag=1
+      break
+    fi
+    l=`expr $l - 1`
+  done
+  if [ $flag -ne 1 ]; then
+  echo $word >> $palwords
+  fi
 }
-rm palin.txt
-for word in $(<a.txt)
-do
-	echo $word>t.txt
-	if grep -E '\.$|\;$' t.txt
-		then
-			count=`wc -c <t.txt`
-			count=$(($count - 2))
-	word=`cut -c 1-$count t.txt` 
-	fi
-	palindrome $word
-done
-clear
-cat palin.txt
+
+rm palwords.txt
+f=afile.txt
+palwords=palwords.txt
+if [ -f $f ]; then
+  exec<$f
+  
+  for w in $(<$f); do
+    echo $w > temp.txt
+    if grep -q '\.$|\;$' temp.txt; then
+      count=`wc -c < temp.txt`
+      count=$((count-2))
+      w=`cut -c 1-$count temp.txt`
+    fi
+    ispalin $w
+  done
+  rm temp.txt
+  echo file ready in palwords.txt
+else  echo error in opening file.
+fi
