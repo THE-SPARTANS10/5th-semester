@@ -1,0 +1,6 @@
+Roll |    Name   | Marks | Grade
+~~~~-|-~~~~~~~~~-|-~~~~~-|-~~~~~
+  70  - Soumyadeep -   100  -  O
+  59  - Tamonash -   90  -  O
+  64  - Sudin -   60  -  B
+  58  - Tirthankar -   36  -  
