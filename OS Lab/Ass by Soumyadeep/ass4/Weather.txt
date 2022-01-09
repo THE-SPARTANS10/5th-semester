@@ -1,0 +1,10 @@
+DAY-|-TEMP-|-WTR
+~~~~|~~~~~~|~~~~
+SUN |  14  | Very Cold
+MON |  21  | Cold
+TUE |  28  | Hot
+WED |  36  | Very Hot
+THR |  31  | Hot
+FRI |  26  | Hot
+SAT |  20  | Cold
+SAT |  20  | Cold
