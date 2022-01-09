@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main(){
+	printf("Enter a number: ");
+	int n, f=1,i;
+	scanf("%d", &n);
+	for(i=2;i<=n;f*=i,i++);
+	n<0?printf("Invalid Input.") : printf("The factorial is %d.",f);
+}
