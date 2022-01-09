@@ -1,0 +1,56 @@
+1.task ids are important to show precedence relation
+2.different task precedence relation:-
+->finish to start:-after termination of first job , second job should start
+->start to finish
+->start to start
+->finish to finish
+
+3.why the task are coloured red in gant chart:
+->to represent critical task w.r.t software
+
+->CRITICAL TASK:- Tasks that cannot be delayed without affecting the project finish date are the critical task
+
+4.gant chart are used to represent the task graphicaly along with the starting and finishing time 
+
+->M1[4] -> M1 Resource need 4 units
+
+5. expected time=(to+4*tm+tp)/6
+to=optimistic time,tp=pessimistic time,tm=most likely time
+
+6.Meaning of forward schedule in project libre
+ 
+7.what is SRS?
+->SRS or Software Requirement Study , it is a well written document which contains all requirement of customer
+
+8.what is coupling and cohesion?
+
+9.what is DFD?
+
+10 what is task dependency and predecessors in project libre ??
+
+11. what is critical activity?
+
+12.what is CPM?
+
+13.which model is known as meta model ?
+->spiral because it conatins fetaures of others models
+
+14.what is PERT and optimistic,pessimistic and most likely time?
+->programme evaluation review training
+
+15.what is black box and white box testing ?.
+
+16.what is cfg?(cfg formula)
+
+17.what is used case diagram?
+
+18. what is recurrent task?
+
+19. definition gant chart?
+
+20.need of task ids?
+---------------------------------------------------------------------------------------------
+
+
+EXPERIMENTS:-
+project libre
