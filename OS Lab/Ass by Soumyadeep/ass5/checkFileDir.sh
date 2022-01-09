@@ -26,3 +26,4 @@ do
     echo $a
 	fi
 done
+#bash file_dir.sh test hello.txt 
