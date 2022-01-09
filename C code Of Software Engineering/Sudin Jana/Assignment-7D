@@ -1,0 +1,26 @@
+#include<stdio.h>
+void fact(int n)
+{
+	int i,f=1;
+	for(i=1;i<=n;i++)
+		f=f*i;
+	printf("Output is: %d",f);
+}
+
+int main()
+{
+	int n;
+	printf("Enter the number: ");
+	scanf("%d",&n);
+	
+	if(n>=1 && n<=7)
+	{
+		fact(n);
+	}
+	else
+	{
+		printf("Your input is not valid");
+		return;
+	}
+	return 0;
+}

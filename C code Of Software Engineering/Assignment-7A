@@ -1,0 +1,51 @@
+#include<stdio.h>
+void addition(int x,int y)
+{
+	int res;
+	res=x+y;
+	printf("Addition of two number is: %d\n",res);
+}
+void multiplication(int x,int y)
+{
+	int res;
+	res=x*y;
+	printf("Multiplication of two number is: %d\n",res);
+}
+int factorial(int n)
+{
+	int i,f=1;
+	for(i=1;i<=n;i++)
+		f=f*i;
+	return f;
+}
+int myFunc(int a, int b)
+{
+	int d;
+	d=(a*a)-(b*b*b);
+	return d;
+}
+int division(int a,int b)
+{
+	int i;
+	i=a/b;
+	return i;
+}
+void checkEvenOdd(int b)
+{
+	if(b%2==0)
+		printf("%d is even\n",b);
+	else
+		printf("%d is odd\n",b);
+}
+int main()
+{
+	int a,b,n;
+	printf("Enter the two number: ");
+	scanf("%d %d",&a,&b);
+	addition(a,b);
+	multiplication(a,b);
+	//printf("Enter a number to check even or odd: ");
+	//scanf("%d",&n);
+	checkEvenOdd(b);
+	return 0;
+}

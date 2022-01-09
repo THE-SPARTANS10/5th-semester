@@ -1,0 +1,29 @@
+#include<stdio.h>
+void display(int a,int b)
+{
+	printf("\nThe sum of two numbers is-> %d",addition(a,b));
+	printf("\nThe subtraction of two numbers is-> %d",subtraction(a,b));
+}
+int addition(int a,int b)
+{
+	return a+b;
+}
+int subtraction(int a,int b)
+{
+	return a-b;
+}
+void receive(int *x,int *y)
+{
+	int a,b;
+	printf("Enter the two numbers:->");
+	scanf("%d %d",&a,&b);
+	*x=a;
+	*y=b;
+}
+int main()
+{
+	int x,y;
+	receive(&x,&y);
+	display(x,y);
+	return 0;
+}
