@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+
+
+class AddAmount{
+    int amount=50;
+    AddAmount()
+    {
+
+    }
+    AddAmount(int amount)
+    {
+        this.amount+=amount;
+    }
+    public void display()
+    {
+        System.out.println("The amount of your account is: "+amount);
+    }
+}
+
+
+public class Main
+{
+    
+    public static void main(String[] args)
+    {
+        AddAmount firstPerson=new AddAmount();
+        AddAmount secondPerson=new AddAmount(500);
+        firstPerson.display();
+        secondPerson.display();
+    }
+}
