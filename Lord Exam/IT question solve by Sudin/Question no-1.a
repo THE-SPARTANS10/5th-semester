@@ -1,0 +1,18 @@
+public class Sentence_into_array_of_string {
+    public static void main(String[] args)
+    {
+        String str = "I'm Ironman valobasa nis amar";
+        String strArray[] = str.split(" ");
+        System.out.println("Sentance : " + str);
+        System.out.print("Rev String array : \n");
+        for (int i = 1; i <= strArray.length/2; i++) {
+            String str1;
+            str1=strArray[i-1];
+            strArray[i-1] = strArray[strArray.length-i];
+            strArray[strArray.length-i]=str1;
+        }
+        for (int i = 0; i < strArray.length; i++) {
+            System.out.print("["+strArray[i]+"] ");
+        }
+    }
+}
