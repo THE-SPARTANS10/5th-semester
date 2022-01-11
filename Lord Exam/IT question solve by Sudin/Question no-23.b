@@ -21,12 +21,23 @@ public class Main
     public static void main(String[] args)
     {
        Scanner sc=new Scanner(System.in);
-       System.out.println("Enter the two number");
-       int a,b;
-       a=sc.nextInt();
-       b=sc.nextInt();
-       System.out.println("Gcd of two number is:  "+gcd(a,b));
-       System.out.println("Lcm of two number is:  "+lcm(a,b));
-       
+       System.out.println("Enter the number");
+       int n;
+       n=sc.nextInt();
+       int g=1;
+       for(int i=2;i<=n;i++)
+       {
+           g=gcd(g,i);
+       }
+
+       int l=1;
+
+       for(int i=2;i<=n;i++)
+       {
+           l=lcm(l,i);
+       }
+
+       System.out.println("Gcd of n numbers is:  "+g);
+       System.out.println("Lcm of n numbers is:  "+l);
     }
 }
