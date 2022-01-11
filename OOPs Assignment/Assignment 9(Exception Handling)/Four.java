@@ -1,6 +1,3 @@
-import java.io.*;
-import java.util.*;
-
 public class Four {
     public void printRandomThing(){
         System.out.println("Printing something random");
