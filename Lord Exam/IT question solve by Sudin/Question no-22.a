@@ -1,0 +1,57 @@
+import java.util.Scanner;
+
+class Rectangle{
+    int length;
+    int breadth;
+    Rectangle(int length,int breadth)
+    {
+        this.length=length;
+        this.breadth=breadth;
+    }
+    void AreaRectangle()
+    {
+        System.out.println(length*breadth);
+    }
+
+    void PerimeterRectangle()
+    {
+        System.out.println(2*(length+breadth));
+    }
+}
+
+class Square extends Rectangle{
+    int side;
+    Square(int length,int breadth,int side)
+    {
+        super(length,breadth);
+        this.side=side;
+    }
+    
+
+    void AreaSquare()
+    {
+        System.out.println(side*side);
+    }
+
+    void PerimeterSquare()
+    {
+        System.out.println(4*side);
+    }
+}
+
+public class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        int length=sc.nextInt();
+        int breadth=sc.nextInt();
+        int side=sc.nextInt();
+        Square s=new Square(length,breadth,side);
+        
+      s.AreaRectangle();
+      s.PerimeterRectangle();
+      s.AreaSquare();
+      s.PerimeterSquare();
+    }
+}
