@@ -6,23 +6,14 @@ class MyThread extends Thread{
 
     @Override
     public void run(){
-        System.out.println("Name of thread is "+this.getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Name of thread is "+this.getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Name of thread is "+this.getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.println("Name of thread is " + this.getName());
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

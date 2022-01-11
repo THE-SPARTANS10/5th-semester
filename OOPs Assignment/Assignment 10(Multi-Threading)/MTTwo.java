@@ -2,23 +2,14 @@ class Runnable1 implements Runnable{
     @Override
     public void run(){
         Thread currThread = Thread.currentThread();
-        System.out.println("Name of thread is "+currThread.getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Name of thread is "+currThread.getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        System.out.println("Name of thread is "+currThread.getName());
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for (int i = 0; i < 3; i++)
+        {
+            System.out.println("Name of thread is " + currThread.getName());
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }
