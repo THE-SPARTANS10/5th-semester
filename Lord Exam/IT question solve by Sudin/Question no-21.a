@@ -1,0 +1,36 @@
+21.a
+import java.util.Scanner;
+
+public class B{
+    static int x;
+    int y;
+    B(int x,int y)
+    {
+        this.x=x;
+        this.y=y;
+    }
+    public static void m1()
+    {
+        System.out.println("m1()-method");
+    }
+    public void m2()
+    {
+        System.out.println("m2()-method");
+    }
+    public void display()
+    {
+        System.out.println(x+" "+y);
+    }
+    public static void main(String[] args)
+    {
+         Scanner sc=new Scanner(System.in);
+         int x,y;
+         x=sc.nextInt();
+         y=sc.nextInt();
+         B b=new B(x,y);
+         B.m1();
+         b.m2();
+         b.display();
+    }
+}
+
