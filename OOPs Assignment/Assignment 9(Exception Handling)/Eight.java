@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Eight {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException {
         BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
         StringBuilder sb = new StringBuilder();
         System.out.println("Enter a string");

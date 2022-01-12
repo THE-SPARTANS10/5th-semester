@@ -22,12 +22,6 @@ public class Two {
         }
         catch (ArrayIndexOutOfBoundsException ae) {
             System.out.println("Array index chosen is not valid");
-            try {
-                System.out.println(s.charAt(posStr - 1));
-            }
-            catch (StringIndexOutOfBoundsException se){
-                System.out.println("String index chosen is not valid");
-            }
         }
         catch (StringIndexOutOfBoundsException se){
             System.out.println("String index chosen is not valid");

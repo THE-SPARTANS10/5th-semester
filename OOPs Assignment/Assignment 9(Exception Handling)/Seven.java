@@ -1,11 +1,33 @@
 class ExceptionF extends Exception{
+    String message, className;
     ExceptionF(){
-        super();
+        className = "ExceptionF";
+        message = "F exception raised";
+    }
+    @Override
+    public String toString() {
+        return className+": "+message;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
     }
 }
 class ExceptionG extends Exception{
+    String message, className;
     ExceptionG(){
-        super();
+        className = "ExceptionG";
+        message = "G exception raised";
+    }
+    @Override
+    public String toString() {
+        return className+": "+message;
+    }
+
+    @Override
+    public String getMessage() {
+        return message;
     }
 }
 public class Seven {
@@ -14,6 +36,7 @@ public class Seven {
             new Seven().g();
         }
         catch (ExceptionG eg){
+            System.out.println("G exception was caught");
             throw new ExceptionF();
         }
     }

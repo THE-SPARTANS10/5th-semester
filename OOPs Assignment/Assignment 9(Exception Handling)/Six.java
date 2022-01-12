@@ -1,13 +1,18 @@
 import java.io.*;
 class PayOutOfBoundException extends Exception{
+    String message, className;
+    PayOutOfBoundException(){
+        className = "PayOutOfBoundException";
+        message = "Sorry company can't pay you so much money!!";
+    }
     @Override
     public String toString() {
-        return "PayOutOfBoundException: Sorry company can't pay you so much money!!";
+        return className+": "+message;
     }
 
     @Override
     public String getMessage() {
-        return "Sorry company can't pay you so much money!!";
+        return message;
     }
 }
 public class Six {
