@@ -1,22 +1,10 @@
 import java.io.*;
 class PayOutOfBoundException extends Exception{
-    String message, className;
-    PayOutOfBoundException(){
-        className = "PayOutOfBoundException";
-        message = "Sorry company can't pay you so much money!!";
-    }
     PayOutOfBoundException(String msg){
-        className = "PayOutOfBoundException";
-        message = msg;
+        super(msg);
     }
-    @Override
-    public String toString() {
-        return className+": "+message;
-    }
-
-    @Override
-    public String getMessage() {
-        return message;
+    PayOutOfBoundException(){
+        super();
     }
 }
 public class Six {
@@ -28,7 +16,7 @@ public class Six {
         try
         {
             if (salary > maxSalary)
-                throw new PayOutOfBoundException();
+                throw new PayOutOfBoundException("Company can't pay you so much");
             System.out.println("Okay company can pay you this much");
         }
         catch (PayOutOfBoundException pe) {

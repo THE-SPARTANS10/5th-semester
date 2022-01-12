@@ -1,41 +1,16 @@
 class ExceptionF extends Exception{
-    String message, className;
     ExceptionF(){
-        className = "ExceptionF";
-        message = "F exception raised";
     }
     ExceptionF(String msg){
-        className = "ExceptionF";
-        message = msg;
-    }
-    @Override
-    public String toString() {
-        return className+": "+message;
-    }
-
-    @Override
-    public String getMessage() {
-        return message;
+        super(msg);
     }
 }
 class ExceptionG extends Exception{
-    String message, className;
     ExceptionG(){
-        className = "ExceptionG";
-        message = "G exception raised";
+        super();
     }
     ExceptionG(String msg){
-        className = "ExceptionG";
-        message = msg;
-    }
-    @Override
-    public String toString() {
-        return className+": "+message;
-    }
-
-    @Override
-    public String getMessage() {
-        return message;
+        super(msg);
     }
 }
 public class Seven {
@@ -45,11 +20,11 @@ public class Seven {
         }
         catch (ExceptionG eg){
             System.out.println("G exception was caught");
-            throw new ExceptionF();
+            throw new ExceptionF("ExceptionF was raised");
         }
     }
     void g()throws ExceptionG{
-        throw new ExceptionG();
+        throw new ExceptionG("ExceptionG was raised");
     }
     public static void main(String[] args) throws Exception {
         Seven obj = new Seven();
