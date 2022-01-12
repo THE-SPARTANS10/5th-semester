@@ -2,7 +2,12 @@ import java.io.*;
 class PayOutOfBoundException extends Exception{
     @Override
     public String toString() {
-        return "Sorry company cant pay you so much money!!";
+        return "PayOutOfBoundException: Sorry company can't pay you so much money!!";
+    }
+
+    @Override
+    public String getMessage() {
+        return "Sorry company can't pay you so much money!!";
     }
 }
 public class Six {
@@ -19,6 +24,7 @@ public class Six {
         }
         catch (PayOutOfBoundException pe) {
             System.out.println(pe);
+            System.out.println(pe.getMessage());
         }
     }
 }
