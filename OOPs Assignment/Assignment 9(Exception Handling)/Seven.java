@@ -31,7 +31,7 @@ class ExceptionG extends Exception{
     }
 }
 public class Seven {
-    void f() throws Exception {
+    void f() throws ExceptionF {
         try{
             new Seven().g();
         }
@@ -40,7 +40,7 @@ public class Seven {
             throw new ExceptionF();
         }
     }
-    void g()throws Exception{
+    void g()throws ExceptionG{
         throw new ExceptionG();
     }
     public static void main(String[] args) throws Exception {
