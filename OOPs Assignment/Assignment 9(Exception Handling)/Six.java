@@ -5,6 +5,10 @@ class PayOutOfBoundException extends Exception{
         className = "PayOutOfBoundException";
         message = "Sorry company can't pay you so much money!!";
     }
+    PayOutOfBoundException(String msg){
+        className = "PayOutOfBoundException";
+        message = msg;
+    }
     @Override
     public String toString() {
         return className+": "+message;

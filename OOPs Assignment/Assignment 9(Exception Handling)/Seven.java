@@ -4,6 +4,10 @@ class ExceptionF extends Exception{
         className = "ExceptionF";
         message = "F exception raised";
     }
+    ExceptionF(String msg){
+        className = "ExceptionF";
+        message = msg;
+    }
     @Override
     public String toString() {
         return className+": "+message;
@@ -19,6 +23,10 @@ class ExceptionG extends Exception{
     ExceptionG(){
         className = "ExceptionG";
         message = "G exception raised";
+    }
+    ExceptionG(String msg){
+        className = "ExceptionG";
+        message = msg;
     }
     @Override
     public String toString() {
